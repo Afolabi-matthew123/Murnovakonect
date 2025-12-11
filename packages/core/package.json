@@ -1,0 +1,14 @@
+{
+  "name": "@murnova-konect/core",
+  "version": "1.0.0",
+  "description": "Shared core types and utilities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.0"
+  }
+}

@@ -1,30 +1,28 @@
 import { Controller, Get } from '@nestjs/common';
-import { PrismaService } from '../prisma/prisma.service';
+import { Public } from '../common/decorators/public.decorator';
+import { 
+  HealthCheckService, 
+  HttpHealthIndicator, 
+  HealthCheck,
+  HealthCheckResult 
+} from '@nestjs/terminus';
+import { PrismaHealthIndicator } from '../modules/health/prisma.health-indicator';
 
 @Controller('health')
 export class HealthController {
-  constructor(private prisma: PrismaService) {}
+  constructor(
+    private health: HealthCheckService,
+    private http: HttpHealthIndicator,
+    private prismaHealth: PrismaHealthIndicator,
+  ) {}
 
+@Public()
   @Get()
-  async checkHealth() {
-    try {
-      // Test database connection
-      const schoolCount = await this.prisma.school.count();
-      
-      return {
-        status: 'healthy',
-        timestamp: new Date().toISOString(),
-        database: 'connected',
-        schools: schoolCount,
-        message: 'Murnova Konect API is running successfully'
-      };
-    } catch (error) {
-      return {
-        status: 'unhealthy',
-        timestamp: new Date().toISOString(),
-        database: 'disconnected',
-        error: error.message
-      };
-    }
+  @HealthCheck()
+  async check(): Promise<HealthCheckResult> {
+    return this.health.check([
+      () => this.http.pingCheck('nestjs-docs', 'https://docs.nestjs.com'),
+      () => this.prismaHealth.isHealthy('database'),
+    ]);
   }
 }

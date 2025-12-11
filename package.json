@@ -1,17 +1,27 @@
 {
-  "name": "murnova-konect",
+  "name": "murnova-konect-monorepo",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:reset": "docker compose down && docker compose up -d",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "prisma:reset": "prisma migrate reset --force",
+    "api:dev": "pnpm --filter @murnova-konect/api start:dev",
+    "api:build": "pnpm --filter @murnova-konect/api build"
   },
   "devDependencies": {
-    "turbo": "1.6.0"
-  }
+    "turbo": "^2.0.0",
+    "typescript": "^5.0.0",
+    "prisma": "6.19.0",
+    "@prisma/client": "6.19.0"
+  },
+  "packageManager": "pnpm@9.0.0"
 }

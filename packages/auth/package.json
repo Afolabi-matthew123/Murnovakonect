@@ -1,0 +1,17 @@
+{
+  "name": "@murnova-konect/auth",
+  "version": "1.0.0",
+  "description": "Shared authentication types and utilities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@murnova-konect/core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.0"
+  }
+}

@@ -1,0 +1,363 @@
+import { PrismaClient } from '@prisma/client';
+import * as bcrypt from 'bcrypt';
+
+const prisma = new PrismaClient();
+
+async function main() {
+  console.log('í¼± Starting database seeding...');
+
+  // Clear existing data (be careful in production!)
+  await prisma.refreshToken.deleteMany();
+  await prisma.userRole.deleteMany();
+  await prisma.role.deleteMany();
+  await prisma.permission.deleteMany();
+  await prisma.user.deleteMany();
+  await prisma.school.deleteMany();
+
+  // Create permissions
+  const permissions = [
+    { name: 'user:create', description: 'Create users' },
+    { name: 'user:read', description: 'Read users' },
+    { name: 'user:update', description: 'Update users' },
+    { name: 'user:delete', description: 'Delete users' },
+    { name: 'student:create', description: 'Create students' },
+    { name: 'student:read', description: 'Read students' },
+    { name: 'student:update', description: 'Update students' },
+    { name: 'student:delete', description: 'Delete students' },
+    { name: 'staff:create', description: 'Create staff' },
+    { name: 'staff:read', description: 'Read staff' },
+    { name: 'staff:update', description: 'Update staff' },
+    { name: 'staff:delete', description: 'Delete staff' },
+    { name: 'attendance:create', description: 'Create attendance records' },
+    { name: 'attendance:read', description: 'Read attendance records' },
+    { name: 'attendance:update', description: 'Update attendance records' },
+    { name: 'attendance:delete', description: 'Delete attendance records' },
+    { name: 'fee:create', description: 'Create fee invoices' },
+    { name: 'fee:read', description: 'Read fee invoices' },
+    { name: 'fee:update', description: 'Update fee invoices' },
+    { name: 'fee:delete', description: 'Delete fee invoices' },
+    { name: 'result:create', description: 'Create results' },
+    { name: 'result:read', description: 'Read results' },
+    { name: 'result:update', description: 'Update results' },
+    { name: 'result:delete', description: 'Delete results' },
+    { name: 'timetable:create', description: 'Create timetable' },
+    { name: 'timetable:read', description: 'Read timetable' },
+    { name: 'timetable:update', description: 'Update timetable' },
+    { name: 'timetable:delete', description: 'Delete timetable' },
+    { name: 'school:manage', description: 'Manage school settings' },
+    { name: 'system:manage', description: 'Manage system settings' },
+  ];
+
+  const createdPermissions = await Promise.all(
+    permissions.map(async (permission) => {
+      return await prisma.permission.create({
+        data: permission,
+      });
+    })
+  );
+
+  console.log(`âœ… Created ${createdPermissions.length} permissions`);
+
+  // Create global super admin role
+  const superAdminRole = await prisma.role.create({
+    data: {
+      name: 'SUPER_ADMIN',
+      description: 'System super administrator with full access',
+      permissions: {
+        connect: createdPermissions.map((p: any) => ({ id: p.id })),
+      },
+    },
+  });
+
+  console.log('âœ… Created super admin role');
+
+  // Create super admin user
+  const hashedPassword = await bcrypt.hash('admin123', 12);
+  
+  const superAdmin = await prisma.user.create({
+    data: {
+      email: 'superadmin@murnova.com',
+      displayName: 'Super Administrator',
+      password: hashedPassword,
+      isActive: true,
+      roles: {
+        create: {
+          roleId: superAdminRole.id,
+        },
+      },
+    },
+  });
+
+  console.log('âœ… Created super admin user');
+
+  // Create a demo school
+  const demoSchool = await prisma.school.create({
+    data: {
+      name: 'Demo Academy',
+      slug: 'demo-academy',
+      domain: 'demo-academy.com',
+      motto: 'Excellence in Education',
+      tagline: 'Building Future Leaders',
+      vision: 'To be the leading institution in innovative education',
+      primaryColor: '#3B82F6',
+      secondaryColor: '#1E40AF',
+      logoUrl: '/logos/demo-academy.png',
+    },
+  });
+
+  console.log('âœ… Created demo school');
+
+  // Create school domains
+  const schoolDomains = [
+    {
+      host: 'portal.demo-academy.murnovakonect.com',
+      type: 'PORTAL' as const,
+      isPrimary: true,
+      verified: true,
+    },
+    {
+      host: 'timetable.demo-academy.murnovakonect.com',
+      type: 'MODULE' as const,
+      module: 'timetable',
+      verified: true,
+    },
+    {
+      host: 'homework.demo-academy.murnovakonect.com',
+      type: 'MODULE' as const,
+      module: 'homework',
+      verified: true,
+    },
+  ];
+
+  await Promise.all(
+    schoolDomains.map(async (domain) => {
+      return await prisma.schoolDomain.create({
+        data: {
+          ...domain,
+          schoolId: demoSchool.id,
+        },
+      });
+    })
+  );
+
+  console.log('âœ… Created school domains');
+
+  // Create school branding
+  await prisma.schoolBranding.create({
+    data: {
+      schoolId: demoSchool.id,
+      logoUrl: '/logos/demo-academy.png',
+      primaryColor: '#3B82F6',
+      secondaryColor: '#1E40AF',
+      motto: 'Excellence in Education',
+      tagline: 'Building Future Leaders',
+      headerImage: '/headers/demo-school.jpg',
+      faviconUrl: '/favicons/demo-school.ico',
+    },
+  });
+
+  console.log('âœ… Created school branding');
+
+  // Create school site pages
+  const sitePages = [
+    {
+      slug: 'home',
+      title: 'Welcome to Demo Academy',
+      isHome: true,
+      contentJson: {
+        blocks: [
+          {
+            type: 'hero',
+            title: 'Welcome to Demo Academy',
+            subtitle: 'Excellence in Education Since 2024',
+            image: '/hero/school-building.jpg',
+          },
+        ],
+      },
+    },
+    {
+      slug: 'about',
+      title: 'About Our School',
+      contentJson: {
+        blocks: [
+          {
+            type: 'section',
+            title: 'Our History',
+            content: 'Demo Academy has been providing quality education since 2024...',
+          },
+        ],
+      },
+    },
+    {
+      slug: 'admission',
+      title: 'Admission Process',
+      contentJson: {
+        blocks: [
+          {
+            type: 'section',
+            title: 'How to Apply',
+            content: 'Our admission process is straightforward and transparent...',
+          },
+        ],
+      },
+    },
+  ];
+
+  await Promise.all(
+    sitePages.map(async (page) => {
+      return await prisma.schoolSitePage.create({
+        data: {
+          ...page,
+          schoolId: demoSchool.id,
+        },
+      });
+    })
+  );
+
+  console.log('âœ… Created school site pages');
+
+  // Create school-specific roles
+  const schoolAdminPermissions = createdPermissions
+    .filter((p: any) => !p.name.startsWith('system:'))
+    .map((p: any) => ({ id: p.id }));
+
+  const schoolAdminRole = await prisma.role.create({
+    data: {
+      name: 'SCHOOL_ADMIN',
+      description: 'School administrator with full school access',
+      schoolId: demoSchool.id,
+      permissions: {
+        connect: schoolAdminPermissions,
+      },
+    },
+  });
+
+  const teacherPermissions = createdPermissions
+    .filter((p: any) => 
+      p.name.includes('student:read') ||
+      p.name.includes('attendance:') ||
+      p.name.includes('result:') ||
+      p.name.includes('timetable:')
+    )
+    .map((p: any) => ({ id: p.id }));
+
+  const teacherRole = await prisma.role.create({
+    data: {
+      name: 'TEACHER',
+      description: 'School teacher',
+      schoolId: demoSchool.id,
+      permissions: {
+        connect: teacherPermissions,
+      },
+    },
+  });
+
+  const parentPermissions = createdPermissions
+    .filter((p: any) => 
+      p.name.includes('student:read') ||
+      p.name.includes('attendance:read') ||
+      p.name.includes('result:read') ||
+      p.name.includes('fee:read')
+    )
+    .map((p: any) => ({ id: p.id }));
+
+  const parentRole = await prisma.role.create({
+    data: {
+      name: 'PARENT',
+      description: 'Student parent/guardian',
+      schoolId: demoSchool.id,
+      permissions: {
+        connect: parentPermissions,
+      },
+    },
+  });
+
+  console.log('âœ… Created school roles');
+
+  // Create school admin user
+  const schoolAdmin = await prisma.user.create({
+    data: {
+      email: 'admin@demo-academy.com',
+      displayName: 'School Administrator',
+      password: hashedPassword,
+      isActive: true,
+      schoolId: demoSchool.id,
+      roles: {
+        create: [
+          {
+            roleId: schoolAdminRole.id,
+          },
+        ],
+      },
+    },
+  });
+
+  console.log('âœ… Created school admin user');
+
+  // Create sample classrooms
+  const classrooms = [
+    { name: 'Primary 1', arm: 'A', level: 1 },
+    { name: 'Primary 2', arm: 'A', level: 2 },
+    { name: 'Primary 3', arm: 'A', level: 3 },
+  ];
+
+  const createdClassrooms = await Promise.all(
+    classrooms.map(async (classroom) => {
+      return await prisma.classRoom.create({
+        data: {
+          ...classroom,
+          schoolId: demoSchool.id,
+        },
+      });
+    })
+  );
+
+  console.log('âœ… Created classrooms');
+
+  // Create academic session
+  const academicSession = await prisma.academicSession.create({
+    data: {
+      name: '2024/2025 Academic Session',
+      schoolId: demoSchool.id,
+      terms: {
+        create: [
+          {
+            name: 'First Term',
+            startsAt: new Date('2024-09-10'),
+            endsAt: new Date('2024-12-15'),
+            schoolId: demoSchool.id,
+          },
+          {
+            name: 'Second Term',
+            startsAt: new Date('2025-01-08'),
+            endsAt: new Date('2025-04-05'),
+            schoolId: demoSchool.id,
+          },
+        ],
+      },
+    },
+  });
+
+  console.log('âœ… Created academic session and terms');
+
+  console.log('í¾‰ Database seeding completed!');
+  console.log('');
+  console.log('í´‘ Default login credentials:');
+  console.log('   Super Admin: superadmin@murnova.com / admin123');
+  console.log('   School Admin: admin@demo-academy.com / admin123');
+  console.log('');
+  console.log('í¿« Demo School:');
+  console.log('   Name: Demo Academy');
+  console.log('   Slug: demo-academy');
+  console.log('   Portal: portal.demo-academy.murnovakonect.com');
+}
+
+main()
+  .catch((e) => {
+    console.error('âŒ Seeding failed:');
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });

@@ -1,0 +1,69 @@
+[INFO] 08:34:26 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.9.2, typescript ver. 5.9.3)
+Compilation error in C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.module.ts
+[ERROR] 08:34:29 ⨯ Unable to compile TypeScript:
+src/modules/auth/auth.module.ts(1,33): error TS1002: Unterminated string literal.
+src/modules/auth/auth.module.ts(2,5): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(2,6): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(2,7): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(3,3): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(3,4): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(5,12): error TS1005: ';' expected.
+src/modules/auth/auth.module.ts(6,10): error TS1005: ';' expected.
+src/modules/auth/auth.module.ts(7,1): error TS1109: Expression expected.
+src/modules/auth/auth.module.ts(7,2): error TS1128: Declaration or statement expected.
+
+[INFO] 09:05:33 Restarting: C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.module.ts has been modified
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +47ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTerminusModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mHealthModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/} (version: 1):[39m[38;5;3m +100ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} (version: 1) route[39m[38;5;3m +5ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health/database, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} (version: 1) route[39m[38;5;3m +0ms[39m
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+PrismaService initialized (lazy loading)
+[32m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +6ms[39m
+[31m[Nest] 9380  - [39m12/02/2025, 9:05:41 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +5ms[39m
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at ExpressAdapter.listen (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+platform-express@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validat_of3jlihjw5ayd24kjpnexei32i\node_modules\@nestjs\platform-express\adapters\express-adapter.js:95:32)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\nest-application.js:183:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\nest-application.js:173:16)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at bootstrap (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\main.ts:47:3)
+[ERROR] 09:05:41 Error: listen EADDRINUSE: address already in use :::3000
+[INFO] 14:35:30 Restarting: C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\app.module.ts has been modified
+Error: Cannot find module './config/redis.module'
+Require stack:
+- C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\app.module.ts
+- C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\main.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.require (node:internal/modules/cjs/loader:1463:12)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\app.module.ts:13:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1706:14)
+[ERROR] 14:35:46 Error: Cannot find module './config/redis.module'
+Require stack:
+- C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\app.module.ts
+- C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\main.ts

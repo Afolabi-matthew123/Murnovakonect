@@ -1,0 +1,723 @@
+
+> @murnova-konect/api@1.0.0 start:dev C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api
+> ts-node-dev --respawn --transpile-only src/main.ts
+
+[INFO] 07:37:03 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.9.2, typescript ver. 5.9.3)
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +41ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTerminusModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mHealthModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:35 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/} (version: 1):[39m[38;5;3m +1328ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} (version: 1) route[39m[38;5;3m +7ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +0ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health/database, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} (version: 1) route[39m[38;5;3m +2ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} (version: 1) route[39m[38;5;3m +0ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} (version: 1) route[39m[38;5;3m +2ms[39m
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+PrismaService initialized (lazy loading)
+[32m[Nest] 7408  - [39m12/02/2025, 7:37:36 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +8ms[39m
+��� Murnova Konect API running on port 3000
+��� API Documentation: http://localhost:3000/api/docs
+[INFO] 08:06:58 Restarting: C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts has been modified
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +54ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTerminusModule dependencies initialized[39m[38;5;3m +4ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mHealthModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/} (version: 1):[39m[38;5;3m +140ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} (version: 1) route[39m[38;5;3m +6ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health/database, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} (version: 1) route[39m[38;5;3m +2ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} (version: 1) route[39m[38;5;3m +0ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} (version: 1) route[39m[38;5;3m +2ms[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+PrismaService initialized (lazy loading)
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:04 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +7ms[39m
+��� Murnova Konect API running on port 3000
+��� API Documentation: http://localhost:3000/api/docs
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:28 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "GET",
+  "url": "/health",
+  "statusCode": 404,
+  "duration": "5ms",
+  "contentLength": "69",
+  "ip": "::1",
+  "userAgent": "curl/8.14.1",
+  "timestamp": "2025-12-02T16:07:28.902Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mRegistration failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:28:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:28:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/register",
+  "statusCode": 500,
+  "duration": "149ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "curl/8.14.1",
+  "timestamp": "2025-12-02T16:07:29.547Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/register returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mRegistration failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:37:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:37:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/register",
+  "statusCode": 500,
+  "duration": "6ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "curl/8.14.1",
+  "timestamp": "2025-12-02T16:07:29.742Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/register returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mLogin failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:92:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:92:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/login",
+  "statusCode": 500,
+  "duration": "5ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "curl/8.14.1",
+  "timestamp": "2025-12-02T16:07:29.940Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:29 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/login returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:30 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mLogin failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:94:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:30 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:94:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:30 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/login",
+  "statusCode": 500,
+  "duration": "4ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "curl/8.14.1",
+  "timestamp": "2025-12-02T16:07:30.036Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:30 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/login returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:30 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mLogin failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByGenericIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:154:38)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:98:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:30 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByGenericIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:154:38)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:98:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:30 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/login",
+  "statusCode": 500,
+  "duration": "4ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "curl/8.14.1",
+  "timestamp": "2025-12-02T16:07:30.125Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:30 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/login returned 500[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:40 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "GET",
+  "url": "/health",
+  "statusCode": 404,
+  "duration": "3ms",
+  "contentLength": "69",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:07:40.554Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:41 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mRegistration failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:28:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:41 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:28:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:41 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/register",
+  "statusCode": 500,
+  "duration": "11ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:07:41.092Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:41 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/register returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:41 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mRegistration failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:37:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:41 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:37:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:41 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/register",
+  "statusCode": 500,
+  "duration": "11ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:07:41.633Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:41 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/register returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:42 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mLogin failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:92:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:42 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:92:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:42 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/login",
+  "statusCode": 500,
+  "duration": "11ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:07:42.166Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:42 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/login returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:42 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mLogin failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:94:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:42 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:94:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:07:42 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/login",
+  "statusCode": 500,
+  "duration": "7ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:07:42.690Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:07:42 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/login returned 500[39m
+[32m[Nest] 3140  - [39m12/02/2025, 8:16:16 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "GET",
+  "url": "/",
+  "statusCode": 404,
+  "duration": "1ms",
+  "contentLength": "63",
+  "ip": "::1",
+  "userAgent": "curl/8.14.1",
+  "timestamp": "2025-12-02T16:16:16.827Z"
+}
+
+[32m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "GET",
+  "url": "/",
+  "statusCode": 404,
+  "duration": "1ms",
+  "contentLength": "63",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:16:17.187Z"
+}
+
+[32m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "GET",
+  "url": "/v1/health",
+  "statusCode": 200,
+  "duration": "1ms",
+  "contentLength": "170",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:16:17.199Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mRegistration failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:28:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:28:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/register",
+  "statusCode": 500,
+  "duration": "4ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:16:17.218Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/register returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mRegistration failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:37:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:37:53)
+    at AuthController.register (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:13:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/register",
+  "statusCode": 500,
+  "duration": "5ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:16:17.227Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/register returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mLogin failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:92:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:92:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/login",
+  "statusCode": 500,
+  "duration": "3ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:16:17.234Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/login returned 500[39m
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[AuthService] [39m[31mLogin failed[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:94:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31m@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.[39m
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@prisma+client@6.19.0_prisma@6.19.0_typescript@5.9.3__typescript@5.9.3\node_modules\.prisma\client\default.js:43:11)
+    at PrismaService.get prisma [as prisma] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:10:22)
+    at PrismaService.get user [as user] (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\database\prisma.service.ts:30:28)
+    at AuthService.findUserByIdentifier (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:131:30)
+    at AuthService.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.service.ts:94:27)
+    at AuthController.login (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts:20:29)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:38:29
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\router\router-proxy.js:9:17
+[32m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [32m    LOG[39m [38;5;3m[PerformanceMiddleware] [39m[32mObject:[39m
+{
+  "message": "API Performance",
+  "method": "POST",
+  "url": "/v1/auth/login",
+  "statusCode": 500,
+  "duration": "4ms",
+  "contentLength": "52",
+  "ip": "::1",
+  "userAgent": "",
+  "timestamp": "2025-12-02T16:16:17.242Z"
+}
+
+[31m[Nest] 3140  - [39m12/02/2025, 8:16:17 AM [31m  ERROR[39m [38;5;3m[PerformanceMiddleware] [39m[31mAPI Error: POST /v1/auth/login returned 500[39m
+[INFO] 08:33:35 Restarting: C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.controller.ts has been modified
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +75ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTerminusModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mHealthModule dependencies initialized[39m[38;5;3m +7ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/} (version: 1):[39m[38;5;3m +165ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} (version: 1) route[39m[38;5;3m +5ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +0ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health/database, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health} (version: 1):[39m[38;5;3m +1ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +0ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} (version: 1) route[39m[38;5;3m +2ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} (version: 1) route[39m[38;5;3m +0ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} (version: 1) route[39m[38;5;3m +2ms[39m
+PrismaService initialized (lazy loading)
+[32m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +6ms[39m
+[31m[Nest] 9552  - [39m12/02/2025, 8:33:45 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +5ms[39m
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at ExpressAdapter.listen (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+platform-express@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validat_of3jlihjw5ayd24kjpnexei32i\node_modules\@nestjs\platform-express\adapters\express-adapter.js:95:32)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\nest-application.js:183:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\nest-application.js:173:16)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at bootstrap (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\main.ts:47:3)
+[ERROR] 08:33:45 Error: listen EADDRINUSE: address already in use :::3000
+[INFO] 08:34:02 Restarting: C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.module.ts has been modified
+Compilation error in C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.module.ts
+[ERROR] 08:34:06 ⨯ Unable to compile TypeScript:
+src/modules/auth/auth.module.ts(1,33): error TS1002: Unterminated string literal.
+src/modules/auth/auth.module.ts(2,5): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(2,6): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(2,7): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(3,3): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(3,4): error TS1128: Declaration or statement expected.
+src/modules/auth/auth.module.ts(5,12): error TS1005: ';' expected.
+src/modules/auth/auth.module.ts(6,10): error TS1005: ';' expected.
+src/modules/auth/auth.module.ts(7,1): error TS1109: Expression expected.
+src/modules/auth/auth.module.ts(7,2): error TS1128: Declaration or statement expected.
+
+[INFO] 09:05:33 Restarting: C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\modules\auth\auth.module.ts has been modified
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +61ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTerminusModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mHealthModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/} (version: 1):[39m[38;5;3m +144ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} (version: 1) route[39m[38;5;3m +5ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health/database, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth} (version: 1):[39m[38;5;3m +0ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} (version: 1) route[39m[38;5;3m +2ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} (version: 1) route[39m[38;5;3m +0ms[39m
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} (version: 1) route[39m[38;5;3m +1ms[39m
+PrismaService initialized (lazy loading)
+[32m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +7ms[39m
+[31m[Nest] 13624  - [39m12/02/2025, 9:05:40 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +5ms[39m
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at ExpressAdapter.listen (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+platform-express@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validat_of3jlihjw5ayd24kjpnexei32i\node_modules\@nestjs\platform-express\adapters\express-adapter.js:95:32)
+    at C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\nest-application.js:183:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\node_modules\.pnpm\@nestjs+core@10.4.20_@nestjs+common@10.4.20_class-transformer@0.5.1_class-validator@0.14.3_re_gurxqrqjjjfihi6dsfupr7mtne\node_modules\@nestjs\core\nest-application.js:173:16)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at bootstrap (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\main.ts:47:3)
+[ERROR] 09:05:40 Error: listen EADDRINUSE: address already in use :::3000
+[INFO] 14:35:30 Restarting: C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\app.module.ts has been modified
+Error: Cannot find module './config/redis.module'
+Require stack:
+- C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\app.module.ts
+- C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\main.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.require (node:internal/modules/cjs/loader:1463:12)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\app.module.ts:13:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1706:14)
+[ERROR] 14:35:46 Error: Cannot find module './config/redis.module'
+Require stack:
+- C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\app.module.ts
+- C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api\src\main.ts
