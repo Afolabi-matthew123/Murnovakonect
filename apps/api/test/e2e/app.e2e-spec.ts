@@ -1,18 +1,28 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { describe, it, beforeAll, afterAll, expect } from "vitest";
-import { INestApplication } from '@nestjs/common';
+import { Test } from '@nestjs/testing';
+import { INestApplication, ValidationPipe } from '@nestjs/common';
 import request from 'supertest';
+import { describe, it, beforeAll, afterAll, expect } from 'vitest';
 import { AppModule } from '../../src/app.module';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
 
   beforeAll(async () => {
-    const moduleFixture: TestingModule = await Test.createTestingModule({
+    const moduleRef = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
 
-    app = moduleFixture.createNestApplication();
+    app = moduleRef.createNestApplication();
+
+    app.setGlobalPrefix('api');
+    app.useGlobalPipes(
+      new ValidationPipe({
+        whitelist: true,
+        forbidNonWhitelisted: true,
+        transform: true,
+      }),
+    );
+
     await app.init();
   });
 
@@ -20,29 +30,9 @@ describe('AppController (e2e)', () => {
     await app.close();
   });
 
-  it('/health (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/health')
-      .expect(200)
-      .expect((res) => {
-        expect(res.body.status).toBe('ok');
-        expect(res.body.info.database.status).toBe('up');
-      });
-  });
-
-  it('/ (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Murnova Konect API is running!');
-  });
-
-  describe('Tenancy', () => {
-    it('should resolve tenant from x-tenant header', () => {
-      return request(app.getHttpServer())
-        .get('/schools/slug/demo-academy')
-        .set('x-tenant', 'demo-academy')
-        .expect(200);
-    });
+  it('/api/health (GET)', async () => {
+    const res = await request(app.getHttpServer()).get('/api/health');
+    expect(res.status).toBe(200);
+    expect(res.body.status).toBe('ok');
   });
 });

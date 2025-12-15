@@ -45,7 +45,7 @@ export interface JwtPayload {
   email?: string | null;
   phone?: string | null;
   studentId?: string | null;
-  teacherId?: string | null;
+  staffId?: string | null;
   userType: UserType;
   schoolId?: string | null;
   iat?: number;

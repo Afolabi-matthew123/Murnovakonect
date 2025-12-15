@@ -32,9 +32,9 @@ enum DomainType {
 }
 
 model School {
-  id             String    @id @default(uuid())
+  id             String   @id @default(uuid())
   name           String
-  slug           String    @unique
+  slug           String   @unique
   domain         String?
   logoUrl        String?
   primaryColor   String?
@@ -42,30 +42,31 @@ model School {
   motto          String?
   tagline        String?
   vision         String?
-  createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 
   // Relations
-  branding           SchoolBranding?
-  domains            SchoolDomain[]
-  sitePages          SchoolSitePage[]
-  users              User[]
-  students           Student[]
-  staff              Staff[]
-  classRooms         ClassRoom[]
-  academicSessions   AcademicSession[]
-  terms              Term[]
-  timetableSlots     TimetableSlot[]
-  lessonPlans        LessonPlan[]
-  behaviourIncidents BehaviourIncident[]
-  behaviourPoints    BehaviourPoint[]
+  branding            SchoolBranding?
+  domains             SchoolDomain[]
+  sitePages           SchoolSitePage[]
+  users               User[]
+  students            Student[]
+  staff               Staff[]
+  classRooms          ClassRoom[]
+  academicSessions    AcademicSession[]
+  terms               Term[]
+  timetableSlots      TimetableSlot[]
+  lessonPlans         LessonPlan[]
+  behaviourIncidents  BehaviourIncident[]
+  behaviourPoints     BehaviourPoint[]
   portalSubscriptions ParentPortalSubscription[]
-  feeInvoices        FeeInvoice[]
-  payments           Payment[]
-  results            Result[]
-  attendanceRecords  AttendanceRecord[]
-  analyticsSnapshots AnalyticsSnapshot[]
-  roles              Role[]
+  feeInvoices         FeeInvoice[]
+  payments            Payment[]
+  results             Result[]
+  attendanceRecords   AttendanceRecord[]
+  analyticsSnapshots  AnalyticsSnapshot[]
+  roles               Role[]
+  schoolUsers         SchoolUser[]
 
   @@index([slug])
   @@index([createdAt])
@@ -87,15 +88,15 @@ model SchoolBranding {
 }
 
 model SchoolDomain {
-  id        String   @id @default(uuid())
+  id        String     @id @default(uuid())
   schoolId  String
-  school    School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
-  host      String   @unique
+  school    School     @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  host      String     @unique
   type      DomainType
   module    String?
-  isPrimary Boolean  @default(false)
-  verified  Boolean  @default(false)
-  createdAt DateTime @default(now())
+  isPrimary Boolean    @default(false)
+  verified  Boolean    @default(false)
+  createdAt DateTime   @default(now())
 
   @@index([schoolId])
   @@index([type])
@@ -103,15 +104,15 @@ model SchoolDomain {
 }
 
 model SchoolSitePage {
-  id         String   @id @default(uuid())
-  schoolId   String
-  school     School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
-  slug       String
-  title      String
+  id          String   @id @default(uuid())
+  schoolId    String
+  school      School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  slug        String
+  title       String
   contentJson Json
-  isHome     Boolean  @default(false)
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  isHome      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 
   @@unique([schoolId, slug])
   @@index([schoolId])
@@ -119,30 +120,30 @@ model SchoolSitePage {
 
 // USER MODEL
 model User {
-  id        String   @id @default(uuid())
+  id String @id @default(uuid())
 
   // MULTI-IDENTIFIER AUTHENTICATION FIELDS
-  email     String?  @unique
-  phone     String?  @unique
-  studentId String?  @unique  // Links to Student.admissionNo
-  staffId   String?  @unique  // Links to Staff.staffNo
-  parentId  String?  @unique  // Optional parent identifier for parent users
+  email     String? @unique
+  phone     String? @unique
+  studentId String? @unique // Links to Student.admissionNo
+  staffId   String? @unique // Links to Staff.staffNo
+  parentId  String? @unique // Optional parent identifier for parent users
 
   // USER TYPE AND BASIC INFO
   userType      UserType @default(STUDENT)
   displayName   String?
   password      String
-  emailVerified Boolean @default(false)
+  emailVerified Boolean  @default(false)
 
   // ACCOUNT STATUS
-  isActive   Boolean  @default(true)
-  mfaEnabled Boolean  @default(false)
+  isActive   Boolean   @default(true)
+  mfaEnabled Boolean   @default(false)
   mfaSecret  String?
   lastLogin  DateTime?
 
   // TIMESTAMPS
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // TENANCY
   schoolId String?
@@ -150,7 +151,7 @@ model User {
 
   // RELATIONS
   roles               UserRole[]
-  children            Student[]  @relation("ParentChildren")
+  children            Student[]                  @relation("ParentChildren")
   portalSubscriptions ParentPortalSubscription[]
   refreshTokens       RefreshToken[]
 
@@ -159,7 +160,9 @@ model User {
   staffProfile   Staff?   @relation("UserStaff", fields: [staffId], references: [staffNo])
 
   // Parent-specific fields
-  childrenProfiles Student[] @relation("ParentGuardian")
+  childrenProfiles Student[]       @relation("ParentGuardian")
+  schoolUsers      SchoolUser[]
+  studentParents   StudentParent[]
 
   @@index([email])
   @@index([phone])
@@ -183,14 +186,14 @@ model RefreshToken {
 }
 
 model Role {
-  id          String   @id @default(uuid())
-  name        RoleName @unique
+  id          String       @id @default(uuid())
+  name        RoleName     @unique
   description String?
   schoolId    String?
-  school      School?  @relation(fields: [schoolId], references: [id])
+  school      School?      @relation(fields: [schoolId], references: [id])
   permissions Permission[]
   userRoles   UserRole[]
-  createdAt   DateTime @default(now())
+  createdAt   DateTime     @default(now())
 
   @@index([schoolId])
 }
@@ -217,14 +220,14 @@ model UserRole {
 
 // STUDENT
 model Student {
-  id          String   @id @default(uuid())
+  id          String    @id @default(uuid())
   firstName   String
   lastName    String
-  admissionNo String   @unique
+  admissionNo String    @unique
   gender      String?
   dob         DateTime?
   schoolId    String
-  school      School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  school      School    @relation(fields: [schoolId], references: [id], onDelete: Cascade)
 
   // LINK TO USER ACCOUNT
   userId String? @unique
@@ -232,24 +235,25 @@ model Student {
 
   // PARENT/GUARDIAN RELATIONSHIPS
   guardianId String?
-  guardian   User?    @relation("ParentChildren", fields: [guardianId], references: [id])
+  guardian   User?   @relation("ParentChildren", fields: [guardianId], references: [id])
 
   // ADDITIONAL PARENTS
   parentId String?
-  parent   User?    @relation("ParentGuardian", fields: [parentId], references: [id])
+  parent   User?   @relation("ParentGuardian", fields: [parentId], references: [id])
 
   classRoomId String?
   classRoom   ClassRoom? @relation(fields: [classRoomId], references: [id])
 
-  attendances        AttendanceRecord[]
-  results            Result[]
-  behaviourIncidents BehaviourIncident[] @relation("StudentIncidents")
-  behaviourPoints    BehaviourPoint[]
-  feeInvoices        FeeInvoice[]
+  attendances         AttendanceRecord[]
+  results             Result[]
+  behaviourIncidents  BehaviourIncident[]        @relation("StudentIncidents")
+  behaviourPoints     BehaviourPoint[]
+  feeInvoices         FeeInvoice[]
   portalSubscriptions ParentPortalSubscription[]
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  studentParents StudentParent[]
 
   @@index([schoolId])
   @@index([userId])
@@ -261,22 +265,22 @@ model Student {
 
 // STAFF
 model Staff {
-  id        String   @id @default(uuid())
+  id        String  @id @default(uuid())
   firstName String
   lastName  String
-  staffNo   String   @unique
+  staffNo   String  @unique
   email     String?
   phone     String?
   schoolId  String
-  school    School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  school    School  @relation(fields: [schoolId], references: [id], onDelete: Cascade)
 
   // LINK TO USER ACCOUNT
   userId String? @unique
   user   User?   @relation("UserStaff")
 
-  roles         String?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  roles          String?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
   timetableSlots TimetableSlot[]
 
   @@index([schoolId])
@@ -286,15 +290,15 @@ model Staff {
 }
 
 model ClassRoom {
-  id            String   @id @default(uuid())
-  name          String
-  arm           String?
-  level         Int?
-  schoolId      String
-  school        School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
-  students      Student[]
+  id             String          @id @default(uuid())
+  name           String
+  arm            String?
+  level          Int?
+  schoolId       String
+  school         School          @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  students       Student[]
   timetableSlots TimetableSlot[]
-  createdAt     DateTime @default(now())
+  createdAt      DateTime        @default(now())
 
   @@index([schoolId])
 }
@@ -311,15 +315,15 @@ model AcademicSession {
 }
 
 model Term {
-  id        String   @id @default(uuid())
-  name      String
-  startsAt  DateTime?
-  endsAt    DateTime?
-  sessionId String
-  session   AcademicSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
-  schoolId  String
-  school    School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
-  results   Result[]
+  id                  String                     @id @default(uuid())
+  name                String
+  startsAt            DateTime?
+  endsAt              DateTime?
+  sessionId           String
+  session             AcademicSession            @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  schoolId            String
+  school              School                     @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  results             Result[]
   portalSubscriptions ParentPortalSubscription[]
 
   @@index([schoolId])
@@ -343,17 +347,17 @@ model AttendanceRecord {
 }
 
 model FeeInvoice {
-  id        String   @id @default(uuid())
-  invoiceNo String   @unique
+  id        String    @id @default(uuid())
+  invoiceNo String    @unique
   studentId String
-  student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  student   Student   @relation(fields: [studentId], references: [id], onDelete: Cascade)
   amount    Float
   dueDate   DateTime?
   status    String
   schoolId  String
-  school    School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  school    School    @relation(fields: [schoolId], references: [id], onDelete: Cascade)
   payments  Payment[]
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
 
   @@index([schoolId])
   @@index([studentId])
@@ -361,14 +365,14 @@ model FeeInvoice {
 }
 
 model Payment {
-  id        String   @id @default(uuid())
+  id        String      @id @default(uuid())
   amount    Float
   method    String
-  paidAt    DateTime @default(now())
+  paidAt    DateTime    @default(now())
   invoiceId String?
   invoice   FeeInvoice? @relation(fields: [invoiceId], references: [id])
   schoolId  String
-  school    School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  school    School      @relation(fields: [schoolId], references: [id], onDelete: Cascade)
 
   @@index([schoolId])
   @@index([invoiceId])
@@ -392,18 +396,18 @@ model Result {
 }
 
 model TimetableSlot {
-  id          String   @id @default(uuid())
+  id          String     @id @default(uuid())
   classRoomId String?
   classRoom   ClassRoom? @relation(fields: [classRoomId], references: [id])
   staffId     String?
-  staff       Staff?   @relation(fields: [staffId], references: [id])
+  staff       Staff?     @relation(fields: [staffId], references: [id])
   subject     String
   day         Int
   startTime   String
   endTime     String
   schoolId    String
-  school      School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
-  createdAt   DateTime @default(now())
+  school      School     @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  createdAt   DateTime   @default(now())
 
   @@index([schoolId])
   @@index([classRoomId])
@@ -425,16 +429,16 @@ model LessonPlan {
 }
 
 model BehaviourIncident {
-  id        String   @id @default(uuid())
-  studentId String
-  student   Student  @relation("StudentIncidents", fields: [studentId], references: [id], onDelete: Cascade)
+  id         String   @id @default(uuid())
+  studentId  String
+  student    Student  @relation("StudentIncidents", fields: [studentId], references: [id], onDelete: Cascade)
   reportedBy String?
-  type      String
-  notes     String?
-  points    Int      @default(0)
-  schoolId  String
-  school    School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
+  type       String
+  notes      String?
+  points     Int      @default(0)
+  schoolId   String
+  school     School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
 
   @@index([schoolId])
   @@index([studentId])
@@ -477,15 +481,47 @@ model ParentPortalSubscription {
 }
 
 model AnalyticsSnapshot {
-  id       String   @id @default(uuid())
-  schoolId String
-  school   School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
-  scope    String
-  scopeId  String?
-  data     Json
+  id        String   @id @default(uuid())
+  schoolId  String
+  school    School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  scope     String
+  scopeId   String?
+  data      Json
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([schoolId])
   @@index([scope, scopeId])
+}
+
+/// ===============================
+/// PHASE 2 — IDENTITY & RELATIONSHIP MODELS
+/// ===============================
+
+model SchoolUser {
+  id       String @id @default(uuid())
+  userId   String
+  schoolId String
+
+  roles  String[] // ["PARENT", "STAFF", "ADMIN"]
+  status String   @default("ACTIVE")
+
+  user   User   @relation(fields: [userId], references: [id])
+  school School @relation(fields: [schoolId], references: [id])
+
+  @@unique([userId, schoolId])
+}
+
+model StudentParent {
+  id        String @id @default(uuid())
+  studentId String
+  parentId  String // User ID
+
+  relation String // father | mother | guardian
+  verified Boolean @default(false)
+
+  student Student @relation(fields: [studentId], references: [id])
+  parent  User    @relation(fields: [parentId], references: [id])
+
+  @@unique([studentId, parentId])
 }

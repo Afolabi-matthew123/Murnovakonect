@@ -53,5 +53,5 @@ export class RegisterDto {
   @ApiProperty({ example: 'TCH-2024-001', required: false })
   @IsString()
   @IsOptional()
-  teacherId?: string;
+  staffId?: string;
 }

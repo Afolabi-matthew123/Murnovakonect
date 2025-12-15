@@ -72,14 +72,14 @@ export class AuthService {
   }
 
   async login(loginDto: LoginDto) {
-    const { identifier, studentId, teacherId, email, phone, password } = loginDto;
+    const { identifier, studentId, staffId, email, phone, password } = loginDto;
 
     let user: any | null = null;
 
     if (studentId) {
       user = await this.findUserByIdentifier('studentId', studentId);
-    } else if (teacherId) {
-      user = await this.findUserByIdentifier('teacherId', teacherId);
+    } else if (staffId) {
+      user = await this.findUserByIdentifier('staffId', staffId);
     } else if (email) {
       user = await this.findUserByIdentifier('email', email);
     } else if (phone) {
@@ -107,7 +107,7 @@ export class AuthService {
     const tokens = await this.generateTokens(user);
 
     this.logger.log(
-      `User logged in: ${user.email || user.phone || user.studentId || user.teacherId}`,
+      `User logged in: ${user.email || user.phone || user.studentId || user.staffId}`,
     );
     return { user, ...tokens };
   }
@@ -133,7 +133,7 @@ export class AuthService {
       { field: 'email', value: identifier },
       { field: 'phone', value: identifier },
       { field: 'studentId', value: identifier },
-      { field: 'teacherId', value: identifier },
+      { field: 'staffId', value: identifier },
     ];
 
     for (const query of queries) {
@@ -223,7 +223,7 @@ export class AuthService {
       email: user.email,
       phone: user.phone,
       studentId: user.studentId,
-      teacherId: user.teacherId,
+      staffId: user.staffId,
       userType: user.userType,
       schoolId: user.schoolId,
     };
@@ -255,7 +255,7 @@ export class AuthService {
         await this.prisma.user.update({
           where: { id: userId },
           data: {
-            teacherId: profileId,
+            staffId: profileId,
             userType: 'TEACHER',
           },
         });
@@ -283,7 +283,7 @@ export class AuthService {
       const tokens = await this.generateTokens(user);
 
       this.logger.log(
-        `User logged in via LocalAuthGuard: ${user.email || user.phone || user.studentId || user.teacherId}`,
+        `User logged in via LocalAuthGuard: ${user.email || user.phone || user.studentId || user.staffId}`,
       );
       return { user, ...tokens };
     } catch (error) {

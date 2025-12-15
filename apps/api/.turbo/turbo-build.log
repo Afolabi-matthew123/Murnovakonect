@@ -1,0 +1,24 @@
+
+> @murnova-konect/api@1.0.0 build C:\Users\Afolabi O Matthew\OneDrive\Documents\Murnova Konect Project\apps\api
+> tsc -p tsconfig.build.json
+
+src/health/advanced.health.ts(31,21): error TS18046: 'dbStats' is of type 'unknown'.
+src/health/advanced.health.ts(32,37): error TS18046: 'dbStats' is of type 'unknown'.
+src/modules/auth/auth.service.ts(54,9): error TS2322: Type '"STUDENT" | UserType' is not assignable to type 'UserType | undefined'.
+  Type 'UserType.TEACHER' is not assignable to type 'UserType | undefined'.
+src/modules/auth/auth.service.ts(259,13): error TS2322: Type '"TEACHER"' is not assignable to type 'UserType | EnumUserTypeFieldUpdateOperationsInput | undefined'.
+src/modules/students/students.service.ts(44,7): error TS2322: Type '{ schoolId: string; guardianId: string | undefined; dob: Date | null; firstName: string; lastName: string; admissionNo?: string; gender?: string; classRoomId?: string; }' is not assignable to type '(Without<StudentCreateInput, StudentUncheckedCreateInput> & StudentUncheckedCreateInput) | (Without<...> & StudentCreateInput)'.
+  Type '{ schoolId: string; guardianId: string | undefined; dob: Date | null; firstName: string; lastName: string; admissionNo?: string; gender?: string; classRoomId?: string; }' is not assignable to type 'Without<StudentCreateInput, StudentUncheckedCreateInput> & StudentUncheckedCreateInput'.
+    Type '{ schoolId: string; guardianId: string | undefined; dob: Date | null; firstName: string; lastName: string; admissionNo?: string; gender?: string; classRoomId?: string; }' is not assignable to type 'StudentUncheckedCreateInput'.
+      Types of property 'admissionNo' are incompatible.
+        Type 'string | undefined' is not assignable to type 'string'.
+          Type 'undefined' is not assignable to type 'string'.
+src/modules/students/students.service.ts(57,22): error TS2339: Property 'del' does not exist on type 'RedisService'.
+src/modules/students/students.service.ts(137,39): error TS2339: Property 'get' does not exist on type 'RedisService'.
+src/modules/students/students.service.ts(172,24): error TS2339: Property 'set' does not exist on type 'RedisService'.
+src/modules/students/students.service.ts(246,24): error TS2339: Property 'del' does not exist on type 'RedisService'.
+src/modules/students/students.service.ts(264,24): error TS2339: Property 'del' does not exist on type 'RedisService'.
+test-auth.ts(14,40): error TS18046: 'error' is of type 'unknown'.
+test-schools.ts(14,43): error TS18046: 'error' is of type 'unknown'.
+test-users.ts(14,41): error TS18046: 'error' is of type 'unknown'.
+ ELIFECYCLE  Command failed with exit code 2.

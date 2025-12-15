@@ -27,7 +27,7 @@ export class LoginDto {
   })
   @IsString()
   @IsOptional()
-  teacherId?: string;
+  staffId?: string;
 
   @ApiProperty({ 
     example: 'admin@murnova.com',
