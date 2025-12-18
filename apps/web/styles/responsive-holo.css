@@ -1,0 +1,4 @@
+@media (max-width: 768px) {
+  .orbital-ring { display: none; }
+  .content-zone { padding: 1rem; }
+}

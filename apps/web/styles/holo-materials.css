@@ -1,0 +1,8 @@
+.holoshell-container {
+  background: radial-gradient(circle, #1e1b4b, #020617);
+  min-height: 100vh;
+  color: white;
+}
+.holo-panel {
+  backdrop-filter: blur(20px);
+}
