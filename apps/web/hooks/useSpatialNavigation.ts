@@ -1,23 +1,24 @@
-import { useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 
-export function useSpatialNavigation(items: string[]) {
-  const [activeIndex, setActiveIndex] = useState(0);
+export function useSpatialNavigation(role: string) {
+  const [density, setDensity] = useState<'low' | 'medium' | 'high'>('medium');
 
-  const next = useCallback(() => {
-    setActiveIndex((prev) => (prev + 1) % items.length);
-  }, [items.length]);
+  useEffect(() => {
+    switch (role) {
+      case 'super-admin':
+        setDensity('high');
+        break;
+      case 'staff':
+        setDensity('medium');
+        break;
+      case 'parent':
+      case 'student':
+        setDensity('low');
+        break;
+      default:
+        setDensity('medium');
+    }
+  }, [role]);
 
-  const previous = useCallback(() => {
-    setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
-  }, [items.length]);
-
-  const select = useCallback(() => items[activeIndex], [activeIndex, items]);
-
-  return {
-    activeIndex,
-    activeItem: items[activeIndex],
-    next,
-    previous,
-    select,
-  };
+  return { density };
 }
