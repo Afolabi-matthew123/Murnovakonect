@@ -525,3 +525,33 @@ model StudentParent {
 
   @@unique([studentId, parentId])
 }
+
+/// =======================================================
+/// FM-1 BASE MODELS — ARCHITECTURAL FREEZE
+/// -------------------------------------------------------
+/// ❌ DO NOT MODIFY existing FM-1 models below this line
+/// ✅ New models must be added AFTER this section
+/// Frozen at tag: fm1-freeze
+/// =======================================================
+
+/// ===============================
+/// FM-2.3 — Navigation Intelligence
+/// Persistent Navigation Memory
+/// ===============================
+model NavigationPattern {
+  id     String @id @default(uuid())
+  userId String
+  role   String
+
+  entryNode String
+  exitNode  String
+
+  frequency  Int   @default(1)
+  confidence Float @default(0.1)
+
+  lastUsedAt DateTime @updatedAt
+  createdAt  DateTime @default(now())
+
+  @@index([userId, role])
+  @@index([entryNode, exitNode])
+}
